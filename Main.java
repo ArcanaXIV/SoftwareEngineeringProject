@@ -9,16 +9,21 @@ package pkg412project;
  *
  * @author Keenan
  */
+import javax.swing.JApplet;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        newuser u = new newuser();
-        u.main(null);
-        //login l = new login();
-        //l.main(null);
+        newUserFrame u=new newUserFrame();
+        JFrame myFrame=new JFrame("Test");
+        myFrame.add(u);
+        myFrame.pack();
+        myFrame.setVisible(true);
+        u.init();
     }
     
 }
